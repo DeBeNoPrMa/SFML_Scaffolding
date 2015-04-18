@@ -7,7 +7,7 @@
 class InputManager
 {
 public:
-    InputManager();
+    InputManager(sf::RenderWindow* window);
     ~InputManager();
 
     void update();
@@ -15,8 +15,14 @@ public:
 private:
     void initializeInputMapping();
     void addKeyboardMapping(sf::Keyboard::Key input_k);
+    void addMouseMapping(sf::Mouse::Button input_b);
+    void parseEvents(sf::Event event);
+    sf::Vector2f getMousePosition();
 
     std::map<sf::Keyboard::Key, bool> keyboard_map;
+    std::map<sf::Mouse::Button, bool> mouse_map;
+    sf::RenderWindow* window;
+    sf::Vector2f mousePos;
 };
 
 #endif
