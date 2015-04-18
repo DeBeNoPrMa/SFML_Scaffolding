@@ -26,7 +26,7 @@ void InputManager::addMouseMapping(sf::Mouse::Button input_b) {
     }
 }
 
-sf::Vector2f InputManager::getMousePosition() {
+sf::Vector2i InputManager::getMousePosition() {
     return mousePos;
 }
 
