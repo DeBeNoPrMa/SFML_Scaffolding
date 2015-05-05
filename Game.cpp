@@ -1,8 +1,9 @@
 #include "Game.h"
+#include "Resources.h"
 
 #include <string>
 
-#include "Resources.h"
+// Testing
 
 Game::Game(int scrwidth, int scrheight, std::string title, int style) :
     window(sf::VideoMode(scrwidth, scrheight), title, style),
