@@ -17,8 +17,8 @@ class Object {
   sf::Vector2i spriteNum;
   sf::Sprite sprite;
 
-  virtual void update(float deltaTime);
-  virtual void draw();
+  virtual void update(float deltaTime) = 0;
+  virtual void draw() = 0;
 
  private:
   Game* game;

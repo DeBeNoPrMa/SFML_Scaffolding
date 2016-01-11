@@ -25,3 +25,7 @@ void Object::draw() {
     sprite.setPosition(position);
     game->getWindow()->draw(sprite);
 }
+
+void Object::update(float deltaTime) {
+  
+}

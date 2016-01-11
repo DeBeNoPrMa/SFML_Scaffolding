@@ -1,9 +1,10 @@
 #ifndef __SFMLS_GAME_H__
 #define __SFMLS_GAME_H__
 
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 
 #include "InputManager.h"
+#include "Object.h"
 
 class Game
 {
@@ -20,7 +21,7 @@ class Game
   sf::RenderWindow*   getWindow();
 
   // TODO
-  Obect* spawnObject();
+  Object* spawnObject();
  protected:
   InputManager        inputManager;
   sf::RenderWindow    window;

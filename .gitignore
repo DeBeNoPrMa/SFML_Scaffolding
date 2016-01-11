@@ -1,4 +1,2 @@
-*.tlog
-*.idb
-*.vcxproj
-*.filters
+bin
+*.o
