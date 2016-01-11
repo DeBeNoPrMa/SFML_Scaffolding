@@ -7,22 +7,25 @@
 
 class Game
 {
-public:
-    Game(int scrwidth, int scrheight, std::string title, int style);
-    virtual ~Game();
+ public:
+  Game(int scrwidth, int scrheight, std::string title, int style);
+  virtual ~Game();
 
-    void run();
-    virtual void update(float deltaTime) = 0;
-    virtual void draw() = 0;
-    virtual void processEvents() = 0;
+  void run();
+  virtual void update(float deltaTime) = 0;
+  virtual void draw() = 0;
+  virtual void processEvents() = 0;
 
-    InputManager*       getInputManager();
-    sf::RenderWindow*   getWindow();
-protected:
-    InputManager        inputManager;
-    sf::RenderWindow    window;
-private:
-    void render();
+  InputManager*       getInputManager();
+  sf::RenderWindow*   getWindow();
+
+  // TODO
+  Obect* spawnObject();
+ protected:
+  InputManager        inputManager;
+  sf::RenderWindow    window;
+ private:
+  void render();
 };
 
 #endif

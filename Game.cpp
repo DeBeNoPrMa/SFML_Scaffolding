@@ -6,40 +6,40 @@
 // Testing
 
 Game::Game(int scrwidth, int scrheight, std::string title, int style) :
-    window(sf::VideoMode(scrwidth, scrheight), title, style),
-    inputManager(&window)
+  window(sf::VideoMode(scrwidth, scrheight), title, style),
+  inputManager(&window)
 {
-    Resources::load();
+  Resources::load();
 }
 
 Game::~Game(){}
 
 /*
-Game main loop
+  Game main loop
 */
 void Game::run() {
-    sf::Clock c;
-    srand(time(0));
+  sf::Clock c;
+  srand(time(0));
 
-    while (window.isOpen()) {
-        float deltaTime = c.restart().asSeconds();
+  while (window.isOpen()) {
+    float deltaTime = c.restart().asSeconds();
 
-        processEvents();
-        update(deltaTime);
-        render();
-    }
+    processEvents();
+    update(deltaTime);
+    render();
+  }
 }
 
 void Game::render() {
-    window.clear();
-    draw();
-    window.display();
+  window.clear();
+  draw();
+  window.display();
 }
 
 InputManager* Game::getInputManager() {
-    return &inputManager;
+  return &inputManager;
 }
 
 sf::RenderWindow* Game::getWindow() {
-    return &window;
+  return &window;
 }
