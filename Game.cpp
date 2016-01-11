@@ -1,5 +1,5 @@
-#include "Game.h"
-#include "Resources.h"
+#include "Game.hpp"
+#include "Resources.hpp"
 
 #include <string>
 

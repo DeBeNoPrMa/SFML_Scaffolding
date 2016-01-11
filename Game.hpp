@@ -3,8 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 
-#include "InputManager.h"
-#include "Object.h"
+#include "InputManager.hpp"
+#include "Object.hpp"
 
 class Game
 {

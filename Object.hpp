@@ -1,7 +1,7 @@
 #ifndef __SFMLS_OBJECT_H__
 #define __SFMLS_OBJECT_H__
 
-#include "InputManager.h"
+#include "InputManager.hpp"
 
 class Game;
 class Object {
