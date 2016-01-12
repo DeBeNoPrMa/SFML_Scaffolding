@@ -2,6 +2,7 @@
 #define __SFMLS_SCENEMANAGER__
 
 class SceneManager {
+public:
   SceneManager();
   ~SceneManager();
 
