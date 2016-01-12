@@ -2,9 +2,12 @@
 #define __SFMLS_GAME_H__
 
 #include <SFML/Graphics.hpp>
+#include <list>
 
 #include "InputManager.hpp"
 #include "Object.hpp"
+
+#include "SceneManager.hpp"
 
 class Game
 {
@@ -20,11 +23,12 @@ class Game
   InputManager*       getInputManager();
   sf::RenderWindow*   getWindow();
 
-  // TODO
-  Object* spawnObject();
  protected:
+  SceneManager sm;
+
   InputManager        inputManager;
   sf::RenderWindow    window;
+
  private:
   void render();
 };

@@ -26,6 +26,40 @@ void Object::draw() {
     game->getWindow()->draw(sprite);
 }
 
-void Object::update(float deltaTime) {
-  
+void Object::update(float deltaTime) {}
+
+sf::FloatRect Object::getGlobalBounds() const {
+  // TODO
+}
+
+sf::FloatRect Object::getScreenBounds() const {
+  // TODO
+}
+
+sf::Vector2f Object::getGlobalPosition() const {
+  return position;
+}
+
+sf::Vector2f Object::getScreenPosition() const {
+  // TODO
+}
+
+void Object::moveToGlobal(sf::Vector2f new_p) {
+  position = new_p;
+}
+
+void Object::moveToLocal(sf::Vector2f new_p) {
+  // TODO
+}
+
+sf::Vector2f Object::getSize() {
+  return size;
+}
+
+void Object::resize(sf::Vector2f new_size) {
+  size = new_size;
+}
+
+void Object::resize(float multiplier) {
+  size = size * multiplier;
 }
